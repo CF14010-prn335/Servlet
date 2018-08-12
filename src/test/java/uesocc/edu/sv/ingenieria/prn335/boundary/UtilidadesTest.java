@@ -5,14 +5,13 @@
  */
 package uesocc.edu.sv.ingenieria.prn335.boundary;
 
-//import javax.ejb.embeddable.EJBContainer;
-import javax.ejb.embeddable.EJBContainer;
+
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -44,17 +43,16 @@ public class UtilidadesTest {
      * @throws java.lang.Exception
      */
     @Test
-    public void testCorrectorTexto() throws Exception {
+    public void testCorrectorTexto(){
         System.out.println("correctorTexto");
-        String texto = "";
-        try (EJBContainer container = javax.ejb.embeddable.EJBContainer.createEJBContainer()) {
-            Utilidades instance = (Utilidades)container.getContext().lookup("java:global/classes/Utilidades");
-            String expResult = "";
-            String result = instance.correctorTexto(texto);
-            assertEquals(expResult, result);
+        String texto = "a       bb     fdaag      b    c                d";
+        Utilidades instance = new Utilidades();
+        String expResult = "a bb fdaag b c d";
+        String result = instance.correctorTexto(texto);
+        assertEquals(expResult, result);
             // TODO review the generated test code and remove the default call to fail.
             // fail("The test case is a prototype.");
         }
     }
     
-}
+
