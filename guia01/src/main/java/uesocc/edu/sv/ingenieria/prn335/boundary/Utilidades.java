@@ -13,8 +13,9 @@ import javax.ejb.Stateless;
  *
  * @author root
  */
-
-public class Utilidades{
+@Stateless
+@LocalBean
+public class Utilidades implements Serializable {
 
     /** Este metodo recibe un texto,corrige el texto y elimina los dobles espacios en este.
     
@@ -24,9 +25,8 @@ public class Utilidades{
     */ 
     
     public String correctorTexto(String texto){
-        texto= " a       bb     fdaag      b    c                d";
         texto = texto.replaceAll(" +", " ");
         texto = texto.trim();
-        return texto;   
+        return texto;
     }
 }

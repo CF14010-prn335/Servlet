@@ -8,10 +8,10 @@ package uesocc.edu.sv.ingenieria.prn335.boundary;
 
 import org.junit.After;
 import org.junit.AfterClass;
-import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -40,19 +40,14 @@ public class UtilidadesTest {
 
     /**
      * Test of correctorTexto method, of class Utilidades.
-     * @throws java.lang.Exception
      */
     @Test
-    public void testCorrectorTexto(){
+    public void testCorrectorTexto() throws Exception{
         System.out.println("correctorTexto");
-        String texto = "a       bb     fdaag      b    c                d";
+        String texto = "Habia unos estudiantes   les gustaba ir a la universidad   de El     Salvador";
         Utilidades instance = new Utilidades();
-        String expResult = "a bb fdaag b c d";
+        String expResult = "Habia unos estudiantes les gustaba ir a la universidad de El Salvador";
         String result = instance.correctorTexto(texto);
         assertEquals(expResult, result);
-            // TODO review the generated test code and remove the default call to fail.
-            // fail("The test case is a prototype.");
-        }
-    }
-    
-
+    }  
+}

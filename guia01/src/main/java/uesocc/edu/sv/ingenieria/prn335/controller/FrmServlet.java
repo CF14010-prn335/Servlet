@@ -46,6 +46,10 @@ public Utilidades utilidades;
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet FrmServlet at " + request.getContextPath() + "</h1>");
+            request.getParameter("texto");
+            String texto = "";
+            String resultado = utilidades.correctorTexto(texto);
+            out.println("El resultado del texto es "+texto);
             out.println("</body>");
             out.println("</html>");
         }
@@ -104,4 +108,3 @@ public Utilidades utilidades;
     }// </editor-fold>
 
 }
- 
