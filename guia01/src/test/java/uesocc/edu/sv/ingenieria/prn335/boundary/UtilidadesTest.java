@@ -45,9 +45,9 @@ public class UtilidadesTest {
     @Test
     public void testCorrectorTexto(){
         System.out.println("correctorTexto");
-        String texto = "Hola  que     tal  ?";
+        String texto = "a       bb     fdaag      b    c                d";
         Utilidades instance = new Utilidades();
-        String expResult = "Hola que tal ?";
+        String expResult = "a bb fdaag b c d";
         String result = instance.correctorTexto(texto);
         assertEquals(expResult, result);
             // TODO review the generated test code and remove the default call to fail.

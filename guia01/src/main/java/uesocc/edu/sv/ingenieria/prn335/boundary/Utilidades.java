@@ -24,15 +24,9 @@ public class Utilidades{
     */ 
     
     public String correctorTexto(String texto){
-        /*texto = " ";
+        texto= " a       bb     fdaag      b    c                d";
         texto = texto.replaceAll(" +", " ");
         texto = texto.trim();
-        return texto;
-        */ 
-    System.out.println("--"+texto.trim()+"--");
-    System.out.println("--"+texto.replaceAll("\\s","")+"--");
-    System.out.println("--"+texto.replaceAll("\\s*$","")+"--");
-    System.out.println();
-    return texto;
+        return texto;   
     }
 }
